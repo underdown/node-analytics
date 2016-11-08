@@ -11,4 +11,4 @@ Things I've added
 * Browser Model Counts
 
 
-![Additions](/images/dashboard.png?raw=true "Additions")
+![Additions](/images/dashboard2.png?raw=true "Additions")
