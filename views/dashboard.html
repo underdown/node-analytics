@@ -15,7 +15,7 @@
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">Real-Time Analytics<span class="coligo"> | COLIGO.IO</span></a>
+        <a class="navbar-brand" href="/">Real-Time Analytics</a>
       </div>
     </div>
   </nav>
@@ -57,6 +57,54 @@
               <tbody>
                 <tr v-for="(referringSite, count) in referrers">
                   <td>{{ referringSite }}</td>
+                  <td>{{ count }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="sub-header">User Agents</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <td>User Agent</td>
+                <td>Active Users</td>
+              </thead>
+              <tbody>
+                <tr v-for="(userAgent, count) in userAgents">
+                  <td>{{ userAgent }}</td>
+                  <td>{{ count }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="sub-header">Browsers</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <td>Browser</td>
+                <td>Active Users</td>
+              </thead>
+              <tbody>
+                <tr v-for="(browserName, count) in browserNames">
+                  <td>{{ browserName }}</td>
+                  <td>{{ count }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="sub-header">Operating Systems</h2>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <td>OS</td>
+                <td>Active Users</td>
+              </thead>
+              <tbody>
+                <tr v-for="(osName, count) in osNames">
+                  <td>{{ osName }}</td>
                   <td>{{ count }}</td>
                 </tr>
               </tbody>

@@ -60,7 +60,10 @@ function computeStats(){
   return {
     pages: computePageCounts(),
     referrers: computeRefererCounts(),
-    activeUsers: getActiveUsers()
+    activeUsers: getActiveUsers(),
+    userAgents: getUserAgents(),
+    browserNames: getBrowsers(),
+    osNames: getOsNames()
   };
 }
 
@@ -96,6 +99,47 @@ function computeRefererCounts() {
   return referrerCounts;
 }
 
+function getUserAgents(){
+//not yet working
+  var userAgentCounts = {};
+  for (var key in visitorsData) {
+    var userAgent = visitorsData[key].userAgent;
+    if (userAgent in userAgentCounts) {
+      userAgentCounts[userAgent]++;
+    } else {
+      userAgentCounts[userAgent] = 1;
+    }
+  }
+  return userAgentCounts; 
+}
+
+function getBrowsers(){
+//not yet working
+  var browserCounts = {};
+  for (var key in visitorsData) {
+    var browserName = visitorsData[key].browserName;
+    if (browserName in browserCounts) {
+      browserCounts[browserName]++;
+    } else {
+      browserCounts[browserName] = 1;
+    }
+  }
+  return browserCounts; 
+}
+
+function getOsNames(){
+//not yet working
+  var osCounts = {};
+  for (var key in visitorsData) {
+    var osName = visitorsData[key].osName;
+    if (osName in osCounts) {
+      osCounts[osName]++;
+    } else {
+      osCounts[osName] = 1;
+    }
+  }
+  return osCounts; 
+}
 // get the total active users on our site
 function getActiveUsers() {
   return Object.keys(visitorsData).length;

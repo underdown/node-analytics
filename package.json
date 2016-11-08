@@ -1,4 +1,4 @@
-{
+underdown{
   "name": "real-time-analytics",
   "version": "1.0.0",
   "description": "A real-time analytics dashboard with NodeJs, Socket.io, and Vue.js",
@@ -16,7 +16,15 @@
   "author": "Fady Makram",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.13.4",
-    "socket.io": "^1.4.5"
-  }
+    "express": "^4.14.0",
+    "socket.io": "^1.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/underdown/node-analytics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/underdown/node-analytics/issues"
+  },
+  "homepage": "https://github.com/coligo-io/real-time-analytics-node-socketio-vuejs#readme"
 }
