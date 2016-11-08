@@ -9,3 +9,6 @@ Things I've added
 * OS Names and Counts
 * Browser User Agent Strings
 * Browser Model Counts
+
+
+![Additions](/images/dashboard.png?raw=true "Additions")
