@@ -31,12 +31,12 @@ app.get('/dashboard', function(req, res) {
 
 io.on('connection', function(socket) {
   if (socket.handshake.headers.host === config.host
-  && socket.handshake.headers.referer.indexOf(config.host + config.dashboardEndpoint) > -1) {
+    && socket.handshake.headers.referer.indexOf(config.host + config.dashboardEndpoint) > -1) {
 
     // if someone visits '/dashboard' send them the computed visitor data
-    io.emit('updated-stats', computeStats());
+  io.emit('updated-stats', computeStats());
 
-  }
+}
 
   // a user has visited our page - add them to the visitorsData object
   socket.on('visitor-data', function(data) {
@@ -101,44 +101,44 @@ function computeRefererCounts() {
 
 function getUserAgents(){
 //not yet working
-  var userAgentCounts = {};
-  for (var key in visitorsData) {
-    var userAgent = visitorsData[key].userAgent;
-    if (userAgent in userAgentCounts) {
-      userAgentCounts[userAgent]++;
-    } else {
-      userAgentCounts[userAgent] = 1;
-    }
+var userAgentCounts = {};
+for (var key in visitorsData) {
+  var userAgent = visitorsData[key].userAgent;
+  if (userAgent in userAgentCounts) {
+    userAgentCounts[userAgent]++;
+  } else {
+    userAgentCounts[userAgent] = 1;
   }
-  return userAgentCounts; 
+}
+return userAgentCounts; 
 }
 
 function getBrowsers(){
 //not yet working
-  var browserCounts = {};
-  for (var key in visitorsData) {
-    var browserName = visitorsData[key].browserName;
-    if (browserName in browserCounts) {
-      browserCounts[browserName]++;
-    } else {
-      browserCounts[browserName] = 1;
-    }
+var browserCounts = {};
+for (var key in visitorsData) {
+  var browserName = visitorsData[key].browserName;
+  if (browserName in browserCounts) {
+    browserCounts[browserName]++;
+  } else {
+    browserCounts[browserName] = 1;
   }
-  return browserCounts; 
+}
+return browserCounts; 
 }
 
 function getOsNames(){
 //not yet working
-  var osCounts = {};
-  for (var key in visitorsData) {
-    var osName = visitorsData[key].osName;
-    if (osName in osCounts) {
-      osCounts[osName]++;
-    } else {
-      osCounts[osName] = 1;
-    }
+var osCounts = {};
+for (var key in visitorsData) {
+  var osName = visitorsData[key].osName;
+  if (osName in osCounts) {
+    osCounts[osName]++;
+  } else {
+    osCounts[osName] = 1;
   }
-  return osCounts; 
+}
+return osCounts; 
 }
 // get the total active users on our site
 function getActiveUsers() {
