@@ -2,4 +2,10 @@
 
 This code is for the tutorial on creating a real-time website analytics dashboard using NodeJs, Socket.io, and Vue.js.
 
-Check out the full tutorial at [coligo](http://coligo.io/real-time-analytics-with-nodejs-socketio-vuejs/)
+Original code &amp; tutorial at [coligo](http://coligo.io/real-time-analytics-with-nodejs-socketio-vuejs/)
+
+Things I've added
+
+* OS Names and Counts
+* Browser User Agent Strings
+* Browser Model Counts
